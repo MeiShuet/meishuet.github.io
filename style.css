@@ -21,7 +21,7 @@
   
   /* Navbar */
   .navbar {
-    background: white;
+    background: rgba(35, 28, 26, 0.8);
     padding: 1rem 0;
     border-bottom: 1px solid #ddd;
    }
@@ -69,7 +69,7 @@
     position: sticky;
     top: 0;
     z-index: 999;
-    background: white;
+    background: rgba(255,255,255,0.8);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -345,6 +345,101 @@
     list-style-type: disc;
     color: #555;
   }
- 
+  @media (max-width: 768px) {
+    .navbar .container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .hero {
+      height: auto;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+  
+    .hero-content h2 {
+      font-size: 2rem;
+    }
+  
+    .summary-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .summary-image {
+      margin: 2rem auto 0;
+    }
+  
+    .showcase-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .skills-grid, .cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+  
+    .modal-content {
+      padding: 1rem;
+    }
+  
+    .skill-card {
+      padding: 1rem;
+    }
+  }
+  /* Hamburger Menu */
+.navbar .hamburger {
+  display: none; /* Hide hamburger icon by default */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.navbar .hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+/* Navbar Styles */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .nav-links.show {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none; /* Hide navbar links on mobile */
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 1rem;
+    z-index: 998;
+  }
+
+  .navbar .hamburger {
+    display: flex; /* Show hamburger icon */
+  }
+
+  .navbar ul.show {
+    display: flex; /* Show menu on click */
+  }
+}
+
   
   
