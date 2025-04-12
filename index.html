@@ -54,7 +54,7 @@
           Recognized for achievements including the <strong>Best Presenter Award</strong> (2019), consistent <strong>Dean’s List</strong> honors in Malaysia, and the <strong>Scholarship Student Award</strong> (2022) in Taiwan.
           Passionate about leveraging <strong>data-driven insights</strong> to contribute to positive change in <strong>marine conservation</strong>.
         </p>
-        <a href="#" class="text-link">Get in touch</a>
+        <a href="resume.html" class="text-link" target="_blank">Check my resume</a>
       </div>
       <div class="summary-image">
         <img src="selfphoto.jpg" alt="Michelle Kong" />
@@ -113,41 +113,76 @@
       <h4>SHOWCASES</h4>
       <h2>Highlights of My Work</h2>
       <div class="showcase-grid">
-        <div class="showcase-item" data-index="0">
-          <img src="showcase1-1.jpg" alt="Showcase 1-1">
-          <img src="showcase1-2.jpg" alt="Showcase 1-2">
-
-          <h3>Spatial mapping with QGIS</h3>
-          <button class="learn-more">Learn More</button>
+      <!-- Showcase 1 -->
+      <div class="slider-container" id="slider1">
+        <h3>Spatial mapping with QGIS</h3>
+        <div class="slider">
+          <img src="showcase1-1.png" alt="Showcase 1-1">
+          <img src="showcase1-2.png" alt="Showcase 1-2">
         </div>
-        <div class="showcase-item" data-index="1">
+        <button class="learn-more">Learn More</button>
+        <button onclick="prevSlide(1)" class="slider-nav prev">⟨</button>
+        <button onclick="nextSlide(1)" class="slider-nav next">⟩</button>
+      </div>
+
+      <!-- Showcase 2 -->
+      <div class="slider-container" id="slider2">
+        <h3>Data analysis with bioinformatics tools</h3>
+        <div class="slider">
           <img src="showcase2-1.png" alt="Showcase 2-1">
           <img src="showcase2-2.png" alt="Showcase 2-2">
-          <img src="showcase2-3.jpg" alt="Showcase 2-3">
+          <img src="showcase2-3.png" alt="Showcase 2-3">
           <img src="showcase2-4.png" alt="Showcase 2-4">
           <img src="showcase2-5.png" alt="Showcase 2-5">
 
-          <h3>Data analysis with bioinformatics tools</h3>
-          <button class="learn-more">Learn More</button>
         </div>
-        <div class="showcase-item" data-index="2">
-          <img src="showcase3-1.jpg" alt="Showcase 3-1">
-          <img src="showcase3-2.jpg" alt="Showcase 3-2">
-          <img src="showcase3-3.png" alt="Showcase 3-3">
-          <img src="showcase3-4.jpg" alt="Showcase 3-4">
-
-          <h3>Data analysis with R programming</h3>
-          <button class="learn-more">Learn More</button>
-        </div>
-        <div class="showcase-item" data-index="3">
-          <img src="showcase4.png" alt="Showcase 4">
-          <h3>Interactive analytics with Power BI</h3>
-          <button class="learn-more">Learn More</button>
-        </div>
+        <button class="learn-more">Learn More</button>
+        <button onclick="prevSlide(2)" class="slider-nav prev">⟨</button>
+        <button onclick="nextSlide(2)" class="slider-nav next">⟩</button>
       </div>
+
+      <!-- Showcase 3 -->
+      <div class="slider-container" id="slider3">
+        <h3>Data analysis with R programming</h3>
+        <div class="slider">
+          <img src="showcase3-1.png" alt="Showcase 3-1">
+          <img src="showcase3-2.png" alt="Showcase 3-2">
+          <img src="showcase3-3.png" alt="Showcase 3-3">
+          <img src="showcase3-4.png" alt="Showcase 3-4">
+        </div>
+        <button class="learn-more">Learn More</button>
+        <button onclick="prevSlide(3)" class="slider-nav prev">⟨</button>
+        <button onclick="nextSlide(3)" class="slider-nav next">⟩</button>
+      </div>
+
+      <!-- Showcase 4 -->
+      <div class="slider-container" id="slider4">
+        <h3>Interactive analytics with Power BI</h3>
+        <div class="slider">
+          <img src="showcase4-1.png" alt="Showcase 4">
+          <img src="showcase4-2.png" alt="Showcase 4">
+        </div>
+        <button class="learn-more">Learn More</button>
+        <button onclick="prevSlide(4)" class="slider-nav prev">⟨</button>
+        <button onclick="nextSlide(4)" class="slider-nav next">⟩</button>
+      </div>
+
     </div>
   </section>
-  
+
+   <!-- Modal -->
+   <div class="modal" id="showcaseModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalImage" src="" alt="">
+      <div class="modal-text">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+
+      </div>
+    </div>
+  </div> 
+
   <!-- Skills Section -->
   <section class="skills" id="skills">
     <div class="container">
@@ -194,39 +229,26 @@
     </div>
   </section>
 
-  <!-- Modal -->
-  <div class="modal" id="showcaseModal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <img id="modalImage" src="" alt="">
-      <div class="modal-text">
-        <h3 id="modalTitle"></h3>
-        <p id="modalDescription"></p>
-        <button id="nextBtn">Next &rarr;</button>
-      </div>
-    </div>
-  </div>
-
   <script>
     const showcases = [
       {
         title: "Spatial mapping using QGIS",
-        description: "Mapped sampling areas for my research project, integrating geospatial data to visualize study sites and enhance environmental analysis.",
-        image: "showcase1.jpg"
+        description: "Mapped sampling areas by integrating geospatial data to visualize study sites and support environmental and ecological analysis. The first map highlights sampling locations across Taiwan used to assess the genetic population structure of a marine bird species, while the second illustrates coastal sampling sites for documenting seahorse distribution and habitat range in Taiwan.",
+        image: "showcase1.png"
       },
       {
         title: "Data analysis using bioinformatics tools",
-        description: "Constructed a haplotype network from genetic sequences to assess genetic connectivity between different populations.",
+        description: "Conducted population genetic analyses to evaluate genetic structure and connectivity among populations. Visualized results through a phylogenetic tree, haplotype network, and STRUCTURE plot to reveal patterns of genetic clustering. Further supported findings with AMOVA and pairwise Fst comparisons to quantify genetic differentiation across populations.",
         image: "showcase2.png"
       },
       {
         title: "Data analysis using R programming",
-        description: "Utilizeed R programming to process and analyze data, including population diversity statistics calculation, ANOVA analysis, PCA plotting and etc.",
+        description: "Utilized R programming to process and analyze ecological and genetic data. Performed population diversity statistics and visualized genetic structure using PCA and DAPC plots to examine population differentiation. Applied the iNEXT package to estimate and compare species diversity through rarefaction and extrapolation curves, and conducted ANOVA to assess significant differences in biodiversity indices across sampling sites.",
         image: "showcase3.png"
       },
       {
-        title: "Interactive analytics with Power BI",
-        description: "Created interactive dashboards in Power BI to transform complex datasets collected from the environmental monitoring surveys into visually engaging formats.",
+        title: "Interactive analytics with Power BI and Excel",
+        description: "Created interactive dashboards in Power BI and Excel to transform complex environmental monitoring datasets into clear, visually engaging formats. Leveraged Power Query in both platforms to efficiently clean, structure, and manage data, significantly reducing processing time and improving the clarity in communicating key findings to stakeholders.",
         image: "showcase4.png"
       }
     ];
@@ -236,7 +258,7 @@
     const modalTitle = document.getElementById("modalTitle");
     const modalDescription = document.getElementById("modalDescription");
     const closeModal = document.querySelector(".close");
-    const nextBtn = document.getElementById("nextBtn");
+    
 
     let currentIndex = 0;
 
@@ -255,11 +277,6 @@
       modal.style.display = "flex";
     }
 
-    nextBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % showcases.length;
-      showModal(currentIndex);
-    });
-
     closeModal.addEventListener("click", () => {
       modal.style.display = "none";
     });
@@ -269,6 +286,35 @@
         modal.style.display = "none";
       }
     });
+
+    // Slider Functions
+    let currentSlides = [0, 0, 0, 0]; // Store current slide index for each showcase
+
+    function showSlide(sliderId, index) {
+      const slides = document.querySelectorAll(`#slider${sliderId} img`);
+      if (index >= slides.length) {
+        currentSlides[sliderId - 1] = 0;
+      } else if (index < 0) {
+        currentSlides[sliderId - 1] = slides.length - 1;
+      } else {
+        currentSlides[sliderId - 1] = index;
+      }
+      slides.forEach(slide => {
+        slide.style.display = "none";
+      });
+      slides[currentSlides[sliderId - 1]].style.display = "block";
+    }
+
+    function nextSlide(sliderId) {
+      showSlide(sliderId, currentSlides[sliderId - 1] + 1);
+    }
+
+    function prevSlide(sliderId) {
+      showSlide(sliderId, currentSlides[sliderId - 1] - 1);
+    }
+
+    // Initialize sliders
+    [1, 2, 3, 4].forEach(sliderId => showSlide(sliderId, currentSlides[sliderId - 1]));
 
     // Hamburger Menu functionality
     const hamburger = document.getElementById("hamburger");
