@@ -8,14 +8,47 @@
     body {
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
     }
-    embed {
+
+    .pdf-container {
       width: 100vw;
       height: 100vh;
+    }
+
+    .mobile-download {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .mobile-download a {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      .pdf-container {
+        display: none;
+      }
+      .mobile-download {
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
-  <embed src="resume.pdf" type="application/pdf" />
+  <div class="pdf-container">
+    <embed src="resume.pdf" type="application/pdf" width="100%" height="100%" />
+  </div>
+  <div class="mobile-download">
+    <p>Viewing this on mobile? <br />Download my resume below:</p>
+    <a href="resume.pdf" download>Download Resume (PDF)</a>
+  </div>
 </body>
 </html>
