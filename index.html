@@ -114,6 +114,7 @@
       <h4>SHOWCASES</h4>
       <h2>Highlights of My Work</h2>
       <div class="showcase-grid">
+        
       <!-- Showcase 1 -->
       <div class="slider-container" id="slider1">
         <h3>Spatial mapping with QGIS</h3>
@@ -156,16 +157,28 @@
         <button onclick="nextSlide(3)" class="slider-nav next">⟩</button>
       </div>
 
-      <!-- Showcase 4 -->
-      <div class="slider-container" id="slider4">
-        <h3>Interactive analytics with Power BI and Excel</h3>
-        <div class="slider">
-          <img src="showcase4-1.png" alt="Showcase 4">
-          <img src="showcase4-2.png" alt="Showcase 4">
-        </div>
+<!-- Showcase 4 -->
+<div class="slider-container" id="slider4">
+  <h3>Interactive Analytics with Power BI and Excel</h3>
+
+  <!-- Embedded Power BI Dashboard -->
+  <div class="dashboard-embed powerbi-embed">
+    <iframe title="Power BI Report"
+      src="https://app.powerbi.com/view?r=eyJrIjoiMDkwZjVkMmMtM2YwNi00MjY5LThmYjgtZTc3MzMyZDEwMjBhIiwidCI6IjhjMzI3ZjdjLWJkNjYtNDgzOC04OGM4LTJkYjU2OWYwMmJlMSIsImMiOjEwfQ%3D%3D"
+      frameborder="0" allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Embedded Excel Dashboard -->
+  <div class="dashboard-embed excel-embed">
+    <iframe 
+      src="https://1drv.ms/x/c/e23e74f282c10631/IQTlAYn9s4RBSauVjiLUs0NfAWcWgJox9Z4QYatOAMnSdaM?wdAllowInteractivity=True&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True"
+      frameborder="0" scrolling="no" allowfullscreen>
+    </iframe>
+  </div>
+
         <button class="learn-more">Learn More</button>
-        <button onclick="prevSlide(4)" class="slider-nav prev">⟨</button>
-        <button onclick="nextSlide(4)" class="slider-nav next">⟩</button>
+
       </div>
 
     </div>
