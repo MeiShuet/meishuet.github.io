@@ -35,11 +35,19 @@
   <section class="hero">
     <div class="container">
       <h2>Hello, I'm Michelle Kong</h2>
+      <h2 class="tagline">Marine Biologist | Environmental Consultant</h2>
       <p>Johor Bahru, Malaysia</p>
       <p><a href="mailto:kongmeishuet@gmail.com">kongmeishuet@gmail.com</a></p>
       <p><a href="https://wa.me/60179972822" target="_blank">+60 17 997 2822</a></p>
       <a class="btn-linkedin" href="https://www.linkedin.com/in/michelle-kong-698470196" target="_blank">Connect on LinkedIn</a>
     </div>
+  <!-- Style for tagline in Hero Section -->
+    <style>
+    .hero .tagline {
+    color: #00d4c9; /* Bright aqua/teal */
+    font-weight: bold;
+    }
+    </style>
   </section>
 
   <!-- Summary Section -->
@@ -48,13 +56,12 @@
       <div class="summary-text">
         <h4>SUMMARY</h4>
         <h2>Advancing Marine Conservation Through Data-Driven Research</h2>
-        <p>
-          <strong>Driven Marine Biologist</strong> with a strong foundation in marine research, environmental monitoring, and data-driven analysis. 
-          Skilled in <strong>underwater field surveys</strong>, <strong>water quality assessments</strong>, <strong>biodiversity studies (population genetics)</strong>, and data analytics.
-          Proven ability to generate insightful environmental assessments using statistical tools (<strong>R</strong>, <strong>Excel</strong>, <strong>Power BI</strong>) and communicate complex findings effectively to stakeholders.
-          Recognized for achievements including the <strong>Best Presenter Award</strong> (2019), consistent <strong>Dean’s List</strong> honors in Malaysia, and the <strong>Scholarship Student Award</strong> (2022) in Taiwan.
-          Passionate about leveraging <strong>data-driven insights</strong> to contribute to positive change in <strong>environmental management and conservation</strong>.
-        </p>
+        <p><strong>Field Expertises:</strong> Environmental Monitoring, Water Quality Assessments, Biodiversity Studies, Population Genetics</p>
+        <p><strong>Data Analytics Skills:</strong> R, Power BI, Excel, QGIS, Bioinformatics tools</p>
+        <p><strong>Projects Led:</strong> Water Quality Survey in Coral Reef & Mariculture Area, Biodiversity Survey in Coral Reef Ecosystem</p>
+        <p><strong>Key Achievements:</strong> Enhanced Data Reporting Workflows, Advanced National Water Quality Standard Development </p>
+        <p><strong>Passions:</strong> Environmental Monitoring & Management, Marine Conservation, Regulatory Compliance</p>
+        
         <a href="resume.html" class="text-link" target="_blank">Check my resume</a>
       </div>
       <div class="summary-image">
@@ -161,7 +168,7 @@
         
       <!-- Showcase 1 -->
       <div class="slider-container" id="slider1">
-        <h3>Spatial analysis with QGIS</h3>
+        <h3>Spatial Analysis with QGIS</h3>
         <div class="slider">
           <img src="showcase1-1.png" alt="Showcase 1-1">
           <img src="showcase1-2.png" alt="Showcase 1-2">
@@ -174,7 +181,7 @@
 
       <!-- Showcase 2 -->
       <div class="slider-container" id="slider2">
-        <h3>Data analysis with bioinformatics tools</h3>
+        <h3>Population Genetics Insights via Bioinformatics</h3>
         <div class="slider">
           <img src="showcase2-1.png" alt="Showcase 2-1">
           <img src="showcase2-2.png" alt="Showcase 2-2">
@@ -190,7 +197,7 @@
 
       <!-- Showcase 3 -->
       <div class="slider-container" id="slider3">
-        <h3>Data analysis with R programming</h3>
+        <h3>Biodiversity Analysis with R</h3>
         <div class="slider">
           <img src="showcase3-1.png" alt="Showcase 3-1">
           <img src="showcase3-2.png" alt="Showcase 3-2">
@@ -204,7 +211,7 @@
 
       <!-- Showcase 4 -->
       <div class="slider-container" id="slider4">
-        <h3>Interactive Analytics with Power BI and Excel</h3>
+        <h3>Water Quality Dashboards (Power BI & Excel)</h3>
 
       <!-- Embedded Power BI Dashboard -->
       <div class="dashboard-embed powerbi-embed">
@@ -214,13 +221,13 @@
         </iframe>
       </div>
 
-    <!-- Embedded Excel Dashboard -->
-    <div class="dashboard-embed excel-embed">
-      <iframe 
-        src="https://1drv.ms/x/c/e23e74f282c10631/IQTlAYn9s4RBSauVjiLUs0NfAWcWgJox9Z4QYatOAMnSdaM?wdAllowInteractivity=True&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True"
-        frameborder="0" scrolling="no" allowfullscreen>
-      </iframe>
-    </div>
+      <!-- Embedded Excel Dashboard -->
+      <div class="dashboard-embed excel-embed">
+        <iframe 
+          src="https://1drv.ms/x/c/e23e74f282c10631/IQTlAYn9s4RBSauVjiLUs0NfAWcWgJox9Z4QYatOAMnSdaM?wdAllowInteractivity=True&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True"
+          frameborder="0" scrolling="no" allowfullscreen>
+        </iframe>
+      </div>
         <button class="learn-more">Learn More</button>
  
   </section>
@@ -248,17 +255,17 @@
         image: "showcase1.png"
       },
       {
-        title: "Data analysis using bioinformatics tools",
+        title: "Population Genetics Insights via Bioinformatics",
         description: "Conducted population genetic analyses to evaluate genetic structure and connectivity among populations. Visualized results through a phylogenetic tree, haplotype network, and STRUCTURE plot to reveal patterns of genetic clustering. Further supported findings with AMOVA and pairwise Fst comparisons to quantify genetic differentiation across populations.",
         image: "showcase2.png"
       },
       {
-        title: "Data analysis using R programming",
+        title: "Biodiversity Analysis with R",
         description: "Utilized R programming to process and analyze ecological and genetic data. Performed population diversity statistics and visualized genetic structure using PCA and DAPC plots to examine population differentiation. Applied the iNEXT package to estimate and compare species diversity through rarefaction and extrapolation curves, and conducted ANOVA to assess significant differences in biodiversity indices across sampling sites.",
         image: "showcase3.png"
       },
       {
-        title: "Interactive analytics with Power BI and Excel",
+        title: "Water Quality Dashboards (Power BI & Excel)",
         description: "Created interactive dashboards in Power BI and Excel to transform complex environmental monitoring datasets into clear, visually engaging formats. Leveraged Power Query in both platforms to efficiently clean, structure, and manage data, significantly reducing processing time and improving the clarity in communicating key findings to stakeholders.",
         image: "showcase4.png"
       }
